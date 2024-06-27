@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rentals Goa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .container-fluid {
+            padding: 20px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            margin-left: auto;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: #f2f2f2;
+            padding: 50px 0;
+        }
+        .hero-content {
+            text-align: center;
+        }
+        .hero-heading {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero-subheading {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            position: relative;
+        }
+        .form-group input {
+            padding-right: 30px; /* Adjust padding to make space for the icon */
+        }
+        .form-group .fas {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none; 
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+        .hero-image {
+            background-image: url("17Harley-Davidson 1200.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .hero-image h2 {
+            color: rgb(252, 252, 252);
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+        .hero-image p {
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        .hero-image button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .hero-image button:hover {
+            background-color: #0056b3;
+        }
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .card i {
+            font-size: 48px;
+            color: #ff5722;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+            margin-top: auto;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            padding: 50px 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .bike-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .bike-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .bike-details {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .bike-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff8c00;
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .bike-card {
+                margin-bottom: 15px;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .table-container {
+            margin: 50px auto;
+            width: 80%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding-top: 50px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .about-us {
+            padding: 20px;
+        }
+        .about-us h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .about-us p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .about-us ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .step {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .step-icon {
+            font-size: 4em;
+            color: orange;
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 1em;
+        }
+
+        .view-more {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        .list-group-item {
+            border: none; /* Remove borders */
+            padding-left: 0; /* Remove left padding for alignment */
+            padding-top: 0; /* Remove top padding */
+            padding-bottom: 0; /* Remove bottom padding */
+            margin-top: 0; /* Remove top margin */
+            margin-bottom: 0; /* Remove bottom margin */
+            background-color: transparent; /* Make background transparent */
+        }
+        .list-group-item::before {
+            content: "• ";
+            color: black; /* You can change the color if needed */
+            font-size: 1.2em; /* Adjust the size of the dot if needed */
+            margin-right: 5px; /* Space between the dot and the text */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3 logo">
+                    <i class="fas fa-motorcycle"></i> BRG
+                    <span class="text-muted">Bike Rentals in Goa</span>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <ul class="nav-links">
+                        <li><a href="#">Bikes</a></li>
+                        <li><a href="#">Trips</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-right">
+                    <a href="#" class="btn btn-outline-light mr-2"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="#" class="btn btn-outline-light"><i class="fas fa-user-plus"></i> Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="hero">
+        <div class="container">
+            <h1 class="text-center">BIKE RENTAL IN GOA</h1>
+            <p class="text-center">Book Now @ 10% Discount</p>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="location">Select Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Enter Location">
+                                
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="pickupDate">Picking Up Date</label>
+                                <input type="date" class="form-control" id="pickupDate">
+                               
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="pickupTime">Picking Up Time</label>
+                                <input type="time" class="form-control" id="pickupTime">
+                                
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="dropOffDate">Dropping Off Date</label>
+                                <input type="date" class="form-control" id="dropOffDate">
+                                
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="dropOffTime">Dropping Off Time</label>
+                                <input type="time" class="form-control" id="dropOffTime">
+                                
+                            </div>
+                            <div class="form-group col-md-9 d-flex align-items-end">
+                                <button type="submit" class="btn btn-primary">Search Bike</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+    <div class="hero-image">
+        <div class="container">
+            <h2>Explore Goa on Two Wheels</h2>
+            <p>Rent a bike and experience the beauty of Goa at your own pace.</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    
+   
+    <div class="container">
+        <h1>WHY BIKERENTAL?</h1>
+        <p>BikeRental is a leading bike rental company offering well-maintained bikes/motorcycles on rent in Goa. We deliver your rental bike at your doorstep according to your
+convenience. Our professional services make us stand out from the crowd. You also can check our client reviews.</p>
+        <div class="content">
+            <div class="card">
+                <i class="fas fa-star"></i>
+                <h2>Assured Bikes</h2>
+                <p>We believe in delivering well-serviced bikes.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-dollar-sign"></i>
+                <h2>Affordable Prices</h2>
+                <p>Grab wide array of bikes & enjoy adventurous bike
+riding experience at the most affordable prices in
+Goa.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-truck"></i>
+                <h2>Affordable Prices</h2>
+                <p>We deliver your rental bike at your doorstep
+according to your convenience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>BIKES ON RENT IN GOA</h1>
+        <p class="text-center">Pick Your Dream Ride With Bike Rental. We deliver your rental bike at your doorstep.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="5Honda-Dio.jpg" alt="Honda Dio" class="bike-img">
+                    <div class="bike-details">
+                        <h3>HONDA DIO</h3>
+                        <p class="bike-price">Starting Price: ₹400</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="6Yamaha-Fassino.jpg" alt="Yamaha Fascino" class="bike-img">
+                    <div class="bike-details">
+                        <h3>YAMAHA FASCINO</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="7Vespa.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>VESPA</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="20Bajaj-Pulser-NS-200.jpg" alt="Honda Dio" class="bike-img">
+                    <div class="bike-details">
+                        <h3>BAJAJ Pulsar NS</h3>
+                        <p class="bike-price">Starting Price: ₹400</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="23KTM-DUKE-200.jpg" alt="Yamaha Fascino" class="bike-img">
+                    <div class="bike-details">
+                        <h3>DUKE 200</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="28Yamaha r15.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>Yamaha R15</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="8Suzuki-Access-125.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>SUZUKI Access</h3>
+                        <p class="bike-price">Starting Price: ₹400</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="9Honda-Activa-125.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>HONDA ACTIVA</h3>
+                        <p class="bike-price">Starting Price: ₹400</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="1660030591Aprilia-SR-150.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>APRILLIA</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="12TVS-Ntorq.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>TVS Ntorq</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="13Bajaj Avenger 220.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>BAJAJ AVENGER</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="1660070206Benelli Imperale.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>Benelli</h3>
+                        <p class="bike-price">Starting Price: ₹1000</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="17Harley-Davidson 1200.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>Harley Davidson Roadster</h3>
+                        <p class="bike-price">Starting Price: ₹7000</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bike-card">
+                    <img src="26Royal-Enfield-Himalayan.jpg" alt="Vespa" class="bike-img">
+                    <div class="bike-details">
+                        <h3>Royal Enfield Himalayan</h3>
+                        <p class="bike-price">Starting Price: ₹500</p>
+                        <button class="btn">View Bike > </button>
+                        <button class="btn">Book Now > </button>
+                    </div>
+                </div>
+            </div>    
+        </div>  
+    </div>
+
+   
+
+    <div class="container">
+        <h2 class="text-center">Bike Rental for one Month, Weekly, Daily & Hourly Basis</h2>
+        <p class="text-center">If you are finding affordable and well-maintained bikes on rent in Goa on a monthly, weekly & hourly basis then you at the right place. We are a renowned company and here you get the best experience while dealing with us. Unleash the rider inside you and rent from our fleet of bikes on a daily, hourly, weekly, and monthly basis. We are here to take care of all your needs.</p>
+        <div class="table-container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Bikes</th>
+                        <th>Daily Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>HONDA ACTIVA</td>
+                        <td>RS. 500/-</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>HONDA DIO</td>
+                        <td>RS. 400/-</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>YAMAHA FASCINO</td>
+                        <td>RS. 500/-</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>VESPA</td>
+                        <td>RS. 500/-</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>APRILLIA</td>
+                        <td>RS. 500/-</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>DUKE 200</td>
+                        <td>RS. 800/-</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>HARLEY DAVIDSON ROADSTER</td>
+                        <td>RS. 400/-</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>NTORQ</td>
+                        <td>RS. 400/-</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>BAJAJ PULSAR</td>
+                        <td>RS. 400/-</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>ROYAL ENFIELD HIMALAYAN</td>
+                        <td>RS. 400/-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="1656096819duke.jpg" alt="Bike">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-us">
+                        <h2>ABOUT US</h2>
+                        <p>BikeRental is a renowned bike rental company in Goa. We started our journey when we noticed the passion and craze people possessed towards bikes. We offer well-maintained bikes/motorcycles on rent all over Goa. We deliver your rental bike to your doorstep according to your convenience. Our professional services make us stand out from the crowd. Rendering easy and swift booking and payment options, BikeRental is your one-stop solution to hire bikes on rent in Goa.</p>
+                        <p>Ever since BikeRental has been true to its core belief in not only providing motorcycles on rent but an experience to cherish. Our top quality Bikes, great services, and support have made us different from others.</p>
+                        <ul>
+                            <li>Diversified range of motorbikes.</li>
+                            <li>Well maintained and insured bike with ISI marked helmet.</li>
+                            <li>Exclusive road trips and tour packages.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="text-center">HOW IT WORKS?</h2>
+            <br><br>
+            <div class="row">
+                <div class="col-md-3 step">
+                    <i class="step-icon fas fa-map-marker-alt"></i>
+                    <h3 class="step-title">Select Location</h3>
+                    <p class="step-description">Select the location to get your Rental Bike.</p>
+                </div>
+                <div class="col-md-3 step">
+                    <i class="step-icon fas fa-calendar-alt"></i>
+                    <h3 class="step-title">Select pick up and drop off</h3>
+                    <p class="step-description">Head to the Pick up and dropping off date and time to get your ride.</p>
+                </div>
+                <div class="col-md-3 step">
+                    <i class="step-icon fas fa-search"></i>
+                    <h3 class="step-title">Choose</h3>
+                    <p class="step-description">Choose out of our fleet of bikes that suits the trip.</p>
+                </div>
+                <div class="col-md-3 step">
+                    <i class="step-icon fas fa-motorcycle"></i>
+                    <h3 class="step-title">Ride</h3>
+                    <p class="step-description">Then you are ready to go on your Dream Bike.</p>
+                </div>
+            </div>
+            <a href="#" class="view-more">View More ></a>
+        </div>
+
+        <div class="container">
+            <h1 class="text-center mt-5">LIVE IT. LOVE IT. RIDE IT.</h1>
+    
+            <p class="mt-5">To explore the magnificent beauty of the Capital city of India with its boughed roads and all its hustle and bustle, getting a bike on rent is a perfect option. Even though you will find all sorts of conveyance in Goa but donâ€™t spoil your fun by roaming in a car. Grab a Bike on Rent and experience the Goa like never before. To explore the magnificent beauty of the Capital city of India with its boughed roads and all its hustle and bustle, getting a bike on rent is a perfect option. Even though you will find all sorts of conveyance in Goa but donâ€™t spoil your fun by roaming in a car. Grab a Bike on Rent and experience the Goa like never before.</p>
+    
+            <h2 class="mt-5">Best place for motorcycle rental in Goa.</h2>
+    
+            <p>We all know that Goa is the best place to rent a bike in Goa. This the official bike renting marketplace in Goa. If you do not want to spend hours to find which one is better than quietly contact Bike Rental. We are a trusted brand and working from last 2 decades. We are the best bike renting platform in Goa. We offer a wider range of bike models, from commuter bikes like Bajaj Discover to high-end premium bikes like Royal Enfield, Pulsar on rent at affordable rates you can choose by your own choice. Here, you get all the bikes are in the best condition.</p>
+    
+            <p class="mt-5">To explore the magnificent beauty of the Capital city of India with its boughed roads and all its hustle and bustle, getting a bike on rent is a perfect option. Even though you will find all sorts of conveyance in Goa but donâ€™t spoil your fun by roaming in a car. Grab a Bike on Rent and experience the Goa like never before.</p>
+            <br><br>
+
+            <h2 class="text-center mb-4">List of Most Popular Bikes Used for Rental Service in Goa:</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Royal Enfield Bullet, Standard, Classic Electra, and Himalayan</li>
+                <li class="list-group-item">KTM Duke</li>
+                <li class="list-group-item">All Avenger models</li>
+                <li class="list-group-item">All Pulsar models</li>
+                <li class="list-group-item">Honda and TVS scooters</li>
+            </ul>
+    
+            <p class="mt-4">Everyone has their own taste so we can not force anyone. As per trip to popular destinations like Ladakh, Leh, Spiti, Manali, Kedarnath, etc many people think that the plane, a tourist bus or a car is the best transport. These are those people who are planning to travel with their families. So they choose the safe and comfortable transport for their journey to Ladakh.</p>
+    
+            <p class="mt-4">On the other hand, most youngsters prefer motorcycle for their journey to Ladakh, Leh, Spiti, Manali, Kedarnath, etc. That is why they use the service of bike rental for Ladakh, Leh, Spiti, Manali, Kedarnath, etc. Youngsters choose bikes because they want to experience every moment of a trip this is the main reason to travel through bikes to a beautiful place like Ladakh, Leh, Spiti, Manali, Kedarnath, etc. Due to this reason, they want to deal with a company which provides the best bike rental for Ladakh, Leh, Spiti, Manali, Kedarnath, etc. So the youngsters first preference is RahalMotoz.</p>
+    
+            <p class="mt-4">Royal Enfield bikes are always popular for adventure trip. So here you can rent a bike for adventure trips easily.</p>
+    
+            <div class="text-center mt-4">
+                <button class="btn btn-primary">Read More</button>
+            </div>
+        </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Bike Rentals in Goa. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
